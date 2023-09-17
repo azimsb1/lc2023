@@ -12,3 +12,11 @@ class Solution(object):
                 return True
             seen.add(num)
         return False
+
+'''
+Time complexity: O(n)
+where n = size of nums
+
+Space Complexity: O(n)
+where n = size of nums
+'''
