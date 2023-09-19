@@ -21,14 +21,14 @@ def twoSum(nums, target):
     # map will remember the numbers seen before and their indices
     seen = {}
 
-    for i in range(len(nums)):
+    for i, number in enumerate(nums):
         # complement is difference between target and nums[i]
-        complement = target - nums[i]
+        complement = target - number
         # if seen complement before, return its index and i
         if complement in seen:
             return [seen[complement], i]
         # otherwise, add nums[i] and i to the seen map
-        seen[nums[i]] = i
+        seen[number] = i
 
     # no solution
     return [-1, -1]                
