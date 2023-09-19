@@ -17,19 +17,18 @@ Space complexity: O(n)
 - in the worst case, we will store n - 1 numebrs in the hash map
 """
 
-class Solution(object):
-    def twoSum(self, nums, target):
-        # map will remember the numbers seen before and their indices
-        seen = {}
+def twoSum(nums, target):
+    # map will remember the numbers seen before and their indices
+    seen = {}
 
-        for i in range(len(nums)):
-            # complement is difference between target and nums[i]
-            complement = target - nums[i]
-            # if seen complement before, return its index and i
-            if complement in seen:
-                return [seen[complement], i]
-            # otherwise, add nums[i] and i to the seen map
-            seen[nums[i]] = i
+    for i in range(len(nums)):
+        # complement is difference between target and nums[i]
+        complement = target - nums[i]
+        # if seen complement before, return its index and i
+        if complement in seen:
+            return [seen[complement], i]
+        # otherwise, add nums[i] and i to the seen map
+        seen[nums[i]] = i
 
-        # no solution
-        return [-1, -1]                
+    # no solution
+    return [-1, -1]                
