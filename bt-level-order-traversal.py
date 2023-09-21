@@ -1,5 +1,6 @@
 """
 LC: https://leetcode.com/problems/binary-tree-level-order-traversal/
+YT: https://www.youtube.com/watch?v=gcR28Hc2TNQ
 
 Approach:
 - BFS, using a queue
