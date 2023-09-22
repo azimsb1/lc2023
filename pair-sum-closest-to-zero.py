@@ -65,3 +65,16 @@ def pair_sum_closes_to_zero(input_arr):
 input_arr = [1, 60, -10, 70, -80, 101, 85]
 expected_arr = [-80, 85]
 assert(pair_sum_closes_to_zero(input_arr) == expected_arr)
+
+input_arr = [1, 7, -30, -31, 9, 1, 3]
+expected_arr = [1, 1]
+assert(pair_sum_closes_to_zero(input_arr) == expected_arr)
+
+
+input_arr = [1, 7, 30, -31, 9, 1, 3]
+expected_arr = [-31, 30]
+assert(pair_sum_closes_to_zero(input_arr) == expected_arr)
+
+input_arr = [1, 7, 0, 1, 3, 0]
+expected_arr = [0, 0]
+assert(pair_sum_closes_to_zero(input_arr) == expected_arr)
