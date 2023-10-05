@@ -1,4 +1,7 @@
 """
+LC: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+YT: https://www.youtube.com/watch?v=suj1ro8TIVY
+
 Serialization:
   - we are going to use a pre-order traversal
   - in each call, process a single node, and then defer all of the other work for recursion
@@ -22,11 +25,6 @@ Time and space complexity: O(n)
 """
 
 def serialize(root):
-    """Encodes a tree to a single string.
-    
-    :type root: TreeNode
-    :rtype: str
-    """
     # base case, Null node
     if not root:
         return 'X,'
@@ -39,11 +37,6 @@ def serialize(root):
 
 
 def deserialize(data):
-    """Decodes your encoded data to tree.
-    
-    :type data: str
-    :rtype: TreeNode
-    """
     # queue will maintain the next node to process
     queue = deque(data.split(','))
     # call the helper recursive method
