@@ -1,8 +1,8 @@
 """
-LC:
+LC: https://leetcode.com/problems/invert-binary-tree/
 YT: https://www.youtube.com/watch?v=OnSn2XEQ4MY
 
-Approach: https://leetcode.com/problems/invert-binary-tree/
+Approach:
 - solving this recursively using DFS
 - for each node, swap its left and right children
 - and then run this algorithm recursively on the left subtree and right subtree so that _their_ children are also swapped
