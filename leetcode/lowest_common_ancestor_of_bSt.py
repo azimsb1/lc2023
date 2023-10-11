@@ -21,7 +21,7 @@ Approach:
 
 Time complexity: O(h)
 - where h = height of the binary Search tree
-- in each function call, we either found the node, or we eliminate half of the tree
+- in each function call, we either find the node, or we eliminate half of the tree
 - we will visit one node for each level in the tree, so the time complexity is height of the tree
 
 Space complexity: O(h):
