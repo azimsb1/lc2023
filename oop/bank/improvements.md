@@ -4,3 +4,4 @@
 2. Connect to a database like MySQL
 3. Use enums for things like transaction types
 
+4. Admin v/s customer
