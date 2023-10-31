@@ -1,5 +1,6 @@
 """
 LC: https://leetcode.com/problems/group-anagrams/
+YT: https://www.youtube.com/watch?v=vzdNOK2oB2E
 
 Approach:
 - key observation is that a given set of strings are anagrams if they have the _same_ number of _same_ characters
