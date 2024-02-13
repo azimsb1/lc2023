@@ -1,4 +1,16 @@
-# https://leetcode.com/problems/valid-anagram
+"""
+LC: https://leetcode.com/problems/valid-anagram
+
+Time complexity: O(a+b)
+Space complexity: O(a+b)
+
+where a is the length of string s,
+  and b is the length of string t.
+"""
+
+
+from collections import defaultdict
+
 
 class Solution(object):
     def isAnagram(self, s, t):
@@ -28,12 +40,6 @@ class Solution(object):
                 return False
         return True
 
-"""
-Time complexity: O(a+b)
-Space complexity: O(a+b)
 
-where a is the length of string s,
-  and b is the length of string t.
-"""
-
-# TODO: try this with just 2 for loops
+solution = Solution()
+assert(solution.isAnagram('racecar', 'carrace') == True)
