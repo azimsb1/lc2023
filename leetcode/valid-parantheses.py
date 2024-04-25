@@ -23,10 +23,12 @@ Time complexity: O(n)
 - where n = length of string
 - we look at each bracket just once
 
-Space complexity: O(1)
-- the onlyu extra space we use is for the pairs hashmap
-- and it's size is constant, no matter how big the input gets
-- so, constant space (O(1))
+Space complexity: O(n)
+- where n = length of string
+- every opening bracket is pushed to the stack
+- in the worst case, all n brackets are open, and pushed to the stack
+- so as the input grows, the length of the stack grows linearly
+- so, the space complexity is O(n)
 """
 
 def isValid(s: str) -> bool:
