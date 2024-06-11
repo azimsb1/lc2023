@@ -1,5 +1,4 @@
-# Question 1
-
+'''
 Given an array of integers `a`, your task is to count the number of pairs `i` and `j` (where 0 ≤ i < j < a.length), such that `a[i]` and `a[j]` are **digit anagrams**.
 Two integers are considered to be digit anagrams if they contain the same digits. In other words, one can be obtained from the other by rearranging the digits (or trivially, if the numbers are equal). For example, `54275` and `45572` are digit anagrams, but `321` and `782` are not (since they don't contain the same digits). `220` and `22` are also not considered as digit anagrams, since they don't even have the same number of digits.
 
@@ -23,13 +22,12 @@ Input/Output
   0 ≤ a[i] ≤ 109.
 * [output] integer64
 The number of pairs i and j, such that a[i] and a[j] are digit anagrams.
+'''
 
+'''
+# Brute force
 
-## Solution 1: Brute Force
-
-```python
 from collections import defaultdict
-
 
 def digit_anagrams(n1, n2):
   # if numbers are same, they are anagrams
@@ -71,12 +69,10 @@ def solution(a):
       if digit_anagrams(a[i], a[j]):
         anagrams += 1
  return anagrams
-```
+'''
 
 
-## Solution 2: Optimized
-
-```python
+# Optimized
 
 from collections import defaultdict
 
@@ -92,41 +88,3 @@ def solution(a):
     anagrams += (freq * (freq-1))/2
 
   return anagrams
-```
-
-
-# Question 2
-
-You are given a string `s`. Consider the following algorithm applied to this string:
-
-1. Take all the prefixes of the string, and choose the longest palindrome between them
-2. If this chosen prefix contains at least two characters, cut this prefix from `s` and go back to the first step with the updated string. Otherwise, end the algorithm with the current string `s` as a result.
-
-Your task is to implement the above algorithm and return its result when applied to string `s`.
-
-Example
-
-* for `s = "aaacodedoc`, the output should be `solution(s) = ""`
-  * The initial string `s = "aaacodedoc"` contains only three prefixes which are also palindromes - `"a", "aa", "aaa"`. The longest one between them is `"aaa"`, so we cut it from `s`.
-  * Now we have string `"codedoc"`. It contains two prefixes which are also palindromes - `"c"` and `"codedoc"`. The longest one between them is `"codedoc"`, so we cut it from the current string and obtain the empty string.
-  * Finally the algorithm ends on the empty string, so the answer is `""`.
-
-* For `s = "codesignal"`, the output should be `solution(s) = "codesignal"`.
-  * The initial string `s = "codesignal"` contains the only prefix, which is also palindrome - `"c"`.
-  * This prefix is the longest, but doesn't contain two characters, so the algorithm ends with string `"codesignal"` as a result.
-
-* For `s = ""`, the output should be `solution(s) = ""`.
-
-Input/Output
-* [execution time limit] 4 seconds (py3)
-* [memory limit] 1 GB
-* [input] string s
-  A string consisting of English lowercase letters.
-  Guaranteed constraints:
-  0 ≤ s.length ≤ 1000.
-* [output] string
-The result of the described algorithm.
-
-
-## Solution
-
